@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo</h1>
+    <input type="text" id="inputadd">
+    <button onclick="add()">Add</button>
+    <br>
+    <input type="text" id="inputdelete">
+    <button onclick="deletetodo()">delete</button>
+    <br>
+    <div>walk</div>
+
+
+    <script>
+        function add(){
+            var todo=document.getElementById("inputadd").value; //getting the input value
+            var newtodo=document.createElement("div");  //creating nw div for new todo
+            var newtodoText=document.createTextNode(todo);  //create content to be added in the new todo
+            newtodo.appendChild(newtodoText); //adding the content to the new todo
+            document.body.appendChild(newtodo);
+        }
+
+        function deletetodo(){
+
+            for (var i=0; i<20; i++){
+                var element=document.getElementsByTagName("div")[i].value;
+                if (todo) {
+               element.parentNode.removeChild(element);
+                }
+            }
+        }    
+    </script>
+</body>
+</html>
