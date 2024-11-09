@@ -24,13 +24,14 @@
         }
 
         function deletetodo(){
-
-            for (var i=0; i<20; i++){
-                var element=document.getElementsByTagName("div")[i].value;
-                if (todo) {
-               element.parentNode.removeChild(element);
-                }
-            }
+            var todo = document.getElementById("inputdelete").value; // getting the input value
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++) {
+        const element = divs[i].textContent; // get the text content of the div
+        if (todo == element) {
+            divs[i].remove(); // remove the div element from the DOM
+        }
+    }
         }    
     </script>
 </body>

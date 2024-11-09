@@ -1,0 +1,5 @@
+React consists of:
+
+State: The variable part of app {more like variable of function}
+Component: {more like function}
+Rendering: how Loading is done in the component
